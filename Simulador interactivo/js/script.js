@@ -23,14 +23,16 @@
  }
 
  function promedio() {
+
      let alumnosTotales = prompt("Ingrese la cantidad de alumnos que tiene en el curso");
      let x = parseInt(alumnosTotales);
+     const alumnos = [];
      let notaTotal = 0;
      let notaIndividual = 0;
      for (let index = 1; index < x + 1; index++) {
-         notaIndividual = parseInt(prompt("Usted indico que tiene " + alumnosTotales + " cantidad de alumnos. Ingrese nota de alumno numero " + index));
-         notaTotal = (notaTotal + notaIndividual);
+         alumnos[index - 1] = (prompt("Usted indico que tiene " + alumnosTotales + " cantidad de alumnos. Ingrese nombre y apellido del alumno " + index));
      }
+
      let promedio = (notaTotal / alumnosTotales);
      alert(" el promedio general del curso es " + promedio);
  }
