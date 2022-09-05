@@ -32,7 +32,10 @@
      for (let index = 1; index < x + 1; index++) {
          alumnos[index - 1] = (prompt("Usted indico que tiene " + alumnosTotales + " cantidad de alumnos. Ingrese nombre y apellido del alumno " + index));
      }
-
+     for (let index = 1; index < alumnos.length + 1; index++) {
+         notaIndividual = parseInt(prompt(" Ingrese la nota de " + alumnos[index - 1]));
+         notaTotal = (notaTotal + notaIndividual);
+     }
      let promedio = (notaTotal / alumnosTotales);
      alert(" el promedio general del curso es " + promedio);
  }
